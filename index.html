@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Admin</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="css/bootstrap-theme.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="css/backgrid.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="css/backgrid-paginator.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="css/index.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	
+</head>
+<body>
+		
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Shazart</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Artworks</a></li>
+            <li><a href="#artist">Artist</a></li>
+            <li><a href="#tools">Tools</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+	
+	<div class="container">
+
+		<div class="row">
+		  <div class="col-lg-6">
+		  </div><!-- /.col-lg-6 -->
+		  <div class="col-lg-6">
+		    <div class="input-group">
+		      <input id="searchInput" type="text" class="form-control" placeholder="Search for...">
+		      <span class="input-group-btn">
+		        <button id="search" class="btn btn-default" type="button">Go!</button>
+		      </span>
+		    </div><!-- /input-group -->
+		  </div><!-- /.col-lg-6 -->
+		</div><!-- /.row -->
+		
+		<div id="allArtworks">
+
+		</div>
+
+		<!-- <nav>
+		  <ul class="pager">
+		    <li class="previous"><a id="#prev" href="#"><span aria-hidden="true">&larr;</span> Previous</a></li>
+		    <li class="next"><a id="#next" href="#">Next <span aria-hidden="true">&rarr;</span></a></li>
+		  </ul>
+		</nav> -->
+    </div><!-- /.container -->
+</body>
+
+<script id="artworkElement" type="text/template">
+		<th class = "artworkInfo"><%= title             %></th>
+		<th class = "artworkInfo"><%= artistName        %></th>			
+		<th class = "artworkInfo"><%= detailDescription %></th>    
+		<th class = "artworkInfo"><%= materials         %></th>  
+		<th class = "artworkInfo"><%= auctionHouse      %></th>     
+		<th class = "artworkInfo"><%= auctionDate       %></th>    
+		<th class = "artworkInfo"><%= salesPrice        %></th> 
+		<th class = "artworkInfo"><%= higherEstimate    %></th>  
+		<th class = "artworkInfo"><%= lowerEstimate     %></th>  
+		<th class = "artworkInfo"><%= image             %></th> 
+			
+</script>
+
+<script id="artworkCollectionElement" type="text/template">
+		<thead>
+			 <tr role="row" class="tablesorter-headerRow">
+		     <th>Title</th>			  
+			 <th>Artist</th>
+			 <th>description </th>
+			 <th>materials   </th>
+			 <th>auctionHouse</th>
+			 <th>auctionDate </th>
+			 <th>salesPrice    </th>
+			 <th>higherEstimate   </th>
+			 <th>lowerEstimate   </th>
+			 <th>image </th>
+		 </thead>		 
+</script>
+
+	<script src="js/libs/jquery-2.1.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/libs/underscore.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/libs/backbone.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/libs/backbone-paginator.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/libs/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/libs/backgrid.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/extensions/backgrid-paginator.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/extensions/backgrid-text-cell.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/libs/baasbox.js"></script>
+
+<!--
+	<script src="js/models/singleArtworkModel.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/collections/artworksCollection.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/views/artworksCollectionView.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/views/singleArtworkView.js" type="text/javascript" charset="utf-8"></script>
+ -->
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

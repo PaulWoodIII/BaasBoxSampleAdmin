@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
 	
-	BaasBox.setEndPoint("http://localhost:9000");
+	BaasBox.setEndPoint('http://ec2-54-173-116-125.eu-west-1.compute.amazonaws.com');
 	BaasBox.appcode = "1234567890";
     BaasBox.fetchCurrentUser();
 	
@@ -108,7 +108,7 @@ $(document).ready(function() {
 	      // }
 	  
 	    },
-		url: 'http://localhost:9000/plugin/helpers.activeArtist/',
+		url: 'http://ec2-54-173-116-125.eu-west-1.compute.amazonaws.com/document/artworks',
 	    parseRecords: function (resp) {
 	      return resp.data;
 	    }
@@ -149,14 +149,14 @@ $(document).ready(function() {
 	var $allArtworks = $("#allArtworks");
 	$allArtworks.append(grid.render().el);
 	$allArtworks.after(paginator.render().el);
+	artworks.fetch();
 	
-    BaasBox.login("admin", "admin")
-	.done(function(user) {
-		artworks.fetch();
-	})
-	.fail(function(err) {
-		console.log("error ", err);
-	})
+	//     BaasBox.login("username", "password")
+	// .done(function(user) {
+	// })
+	// .fail(function(err) {
+	// 	console.log("error ", err);
+	// })
 	
 	
 	
